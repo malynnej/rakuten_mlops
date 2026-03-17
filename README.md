@@ -12,6 +12,7 @@ See the following URL for more details: https://challengedata.ens.fr/challenges/
 
 Main objective is to build a reproducible MLOps architecture with a basic product classification model. Due to the focus on MLOps, we decided to limit the classification part only on the text base and excluded the image part for this project.
 
+
 Methodology And MLOps Architecture
 ----------------------------------
 
@@ -25,6 +26,14 @@ We built a foundational MLOps architecture with following steps:
 7. Experiment tracking with MLflow
 8. Reverse proxy with nginx
 9. Monitoring with Prometheus/Grafana
+
+Data Pipeline
+![Data Pipeline](./streamlit/images/Datapipe_v3.jpg)
+
+MLOps Architecture (Basic)
+![MLOps Architecture](./streamlit/images/MLOps_Architecture.jpg)
+
+To set up the architecture, please follow below instructions.
 
 Outlook
 -------
