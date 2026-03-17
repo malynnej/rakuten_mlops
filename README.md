@@ -1,6 +1,51 @@
 Rakuten Challenge MLOps
 =======================
 
+Project Context And Objective
+-----------------------------
+
+This Project is based on the Rakuten France challenge which aims to classify e-commerce products into 27 categories using both text descriptions and product images.
+
+The dataset from Rakuten France contains 84,916 products with multilingual text descriptions (French, German, English, etc.) with associated images.
+
+See the following URL for more details: https://challengedata.ens.fr/challenges/35
+
+Main objective is to build a reproducible MLOps architecture with a basic product classification model. Due to the focus on MLOps, we decided to limit the classification part only on the text base and excluded the image part for this project.
+
+Methodology And MLOps Architecture
+----------------------------------
+
+We built a foundational MLOps architecture with following steps:
+1. Set up a data pipeline based on a text-based model (BERT)
+2. Created microservices for data, training, evaluation and prediction
+3. Set up of API service with FastAPI
+4. Added ruff actions and unit tests
+5. Containerized services with Docker
+6. Data versioning with DVC/Dagshub
+7. Experiment tracking with MLflow
+8. Reverse proxy with nginx
+9. Monitoring with Prometheus/Grafana
+
+Outlook
+-------
+
+The datapipe and the MLOps architecture can be further enhanced.
+
+Datapipe
+- automate retraining workflow
+- use lighter pytorch or other approaches to decrease Docker images
+- add model registry and serving with MLFlow
+- add image classification and fusion model to the architecture
+
+MLOps architecture
+- automate CI/CD with workflow
+- security improvements (API security, user management)
+- add more performance monitoring metrics (model metrics, drift monitoring)
+- enhance setup: e.g. load balancing with Nginx, workflow orchestration with Airflow, scalability with Kubernetes
+- having dev/stage/prod environment
+
+For more details, please run the streamlit presentation (see below instructions)
+
 Repository Structure
 --------------------
 
